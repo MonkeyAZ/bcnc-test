@@ -2,7 +2,7 @@
 
 _BCNC Group Test Application_
 
-## Comenzando 🚀
+## Comenzando
 
 _Para descargar el proyecto en su pc, ejecutar la instrucción_
 
@@ -12,7 +12,7 @@ git clone https://github.com/MonkeyAZ/bcnc-test.git
 
 Mira **Deployment** para conocer como desplegar el proyecto.
 
-### Pre-requisitos 📋
+### Pre-requisitos
 
 _Para compilar/ejectuar el proyecto es necesario tener instaladas las siguientes dependencias_
 
@@ -21,7 +21,7 @@ Java JDK 11
 Maven 3.8.6
 ```
 
-### Instalación 🔧
+### Instalación
 
 _Una vez instalados los requisitos mencionados en el paso anterior, puedes importar el proyecto en tu editor de codigo elegido (en mi caso he utilizado Visual Studio Code)_
 
@@ -57,7 +57,7 @@ spring.jpa.hibernate.ddl-auto=none
 
 ```
 
-## Ejecutando las pruebas ⚙️
+## Ejecutando las pruebas
 
 _Para ejecutar los test unitarios y de integración, ejecutar la instrucción_
 
@@ -65,7 +65,7 @@ _Para ejecutar los test unitarios y de integración, ejecutar la instrucción_
 mvn test
 ```
 
-### Analisis de pruebas🔩
+### Analisis de pruebas
 
 _Los test comprueban que dados un conjunto de parámetros (product_id, brand_id, date) el sistema recupera el precio correcto de la base de datos_
 
@@ -85,7 +85,7 @@ _Deberá añadir los parámetros en el body de la petición en formato JSON_
 }
 ```
 
-## Despliegue 📦
+## Despliegue
 
 _Para realizar el despliegue utilizar el archivo JAR del directoio target y ejecutarlo usando_
 
@@ -93,7 +93,7 @@ _Para realizar el despliegue utilizar el archivo JAR del directoio target y ejec
 java -jar app-0.0.1-SNAPSHOT.jar
 ```
 
-## Construido con 🛠️
+## Construido con
 
 _Estas son las herramientas usadas para construir el proyecto_
 
