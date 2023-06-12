@@ -85,11 +85,83 @@ public class PriceControllerTest {
         }
 
         @Test
-        public void testgetPrice_withGoodParams() throws JSONException, JsonProcessingException {
+        public void testgetPrice_useCase1() throws JSONException, JsonProcessingException {
 
                 getPriceDTO.setProduct_id(35455);
                 getPriceDTO.setBrand_id(1);
-                getPriceDTO.setDate("2020-12-30 00:00:00.000");
+                getPriceDTO.setDate("2020-06-14 10:00:00.000");
+
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                HttpEntity<String> entity = new HttpEntity<>(mapper.writeValueAsString(getPriceDTO), headers);
+
+                ResponseEntity<String> response = restTemplate.exchange(
+                                createURLWithPort("/prices/get"),
+                                HttpMethod.POST, entity, String.class);
+
+                assertNotNull(response.getBody());
+                assertTrue(response.getStatusCode().equals(HttpStatus.OK));
+        }
+
+        @Test
+        public void testgetPrice_useCase2() throws JSONException, JsonProcessingException {
+
+                getPriceDTO.setProduct_id(35455);
+                getPriceDTO.setBrand_id(1);
+                getPriceDTO.setDate("2020-06-14 16:00:00.000");
+
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                HttpEntity<String> entity = new HttpEntity<>(mapper.writeValueAsString(getPriceDTO), headers);
+
+                ResponseEntity<String> response = restTemplate.exchange(
+                                createURLWithPort("/prices/get"),
+                                HttpMethod.POST, entity, String.class);
+
+                assertNotNull(response.getBody());
+
+        }
+
+        @Test
+        public void testgetPrice_useCase3() throws JSONException, JsonProcessingException {
+
+                getPriceDTO.setProduct_id(35455);
+                getPriceDTO.setBrand_id(1);
+                getPriceDTO.setDate("2020-06-21 10:00:00.000");
+
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                HttpEntity<String> entity = new HttpEntity<>(mapper.writeValueAsString(getPriceDTO), headers);
+
+                ResponseEntity<String> response = restTemplate.exchange(
+                                createURLWithPort("/prices/get"),
+                                HttpMethod.POST, entity, String.class);
+
+                assertNotNull(response.getBody());
+
+        }
+
+        @Test
+        public void testgetPrice_useCase4() throws JSONException, JsonProcessingException {
+
+                getPriceDTO.setProduct_id(35455);
+                getPriceDTO.setBrand_id(1);
+                getPriceDTO.setDate("2020-06-15 10:00:00.000");
+
+                headers.setContentType(MediaType.APPLICATION_JSON);
+                HttpEntity<String> entity = new HttpEntity<>(mapper.writeValueAsString(getPriceDTO), headers);
+
+                ResponseEntity<String> response = restTemplate.exchange(
+                                createURLWithPort("/prices/get"),
+                                HttpMethod.POST, entity, String.class);
+
+                assertNotNull(response.getBody());
+
+        }
+
+        @Test
+        public void testgetPrice_useCase5() throws JSONException, JsonProcessingException {
+
+                getPriceDTO.setProduct_id(35455);
+                getPriceDTO.setBrand_id(1);
+                getPriceDTO.setDate("2020-06-16 21:00:00.000");
 
                 headers.setContentType(MediaType.APPLICATION_JSON);
                 HttpEntity<String> entity = new HttpEntity<>(mapper.writeValueAsString(getPriceDTO), headers);
